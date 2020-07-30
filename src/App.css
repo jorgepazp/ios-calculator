@@ -1,38 +1,143 @@
 .App {
-  text-align: center;
+
+  min-height: 100vh;
+  background-color: #141414;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.display{
+  min-height: 20vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  text-align: right;
+  
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (min-width: 900px) {
+  .margin {
+    margin-left: 200px;
+    margin-right: 200px;
+    flex-direction: column;
+  }
+
+  .display{
+    margin-left: 200px;
+    margin-right: 200px;
+    
+  }
+  .text{
+    font-size: 1.5vw;
+    color: rgb(235, 235, 235);
+  }
+  .btn{
+    padding: 20px;
+    min-height: 7vh;
+    margin: 10px;
+  }
+  .displayFont{
+    font-size: 2.5em;
+    margin-right: 10px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@media (max-width:900px){
+  .text{
+    font-size: 5vw;
+    color: rgb(235, 235, 235);
+  }
+  .btn{
+    padding: 5px;
+    min-height: 5vh;
+    margin: 5px;
+  }
+  .displayFont{
+    font-size: 2em;
+    margin-right: 5px;
+    width: auto;
+  }
+
+ 
+}
+
+.displayFont{
+  font-weight: 100;
+  color:white
+}
+
+.buttons{
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
+  
+}
+
+.btn{
+  display: flex;
+  flex:1;
+
+  background-color: rgb(59, 59, 59);
+
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+  border-radius: 5px;
+  transition: all ease-in-out 0.2s ;
+}
+
+.large{
+  flex:2.26;
+  padding: 20px;
+}
+
+
+.btn:hover{
+  filter: brightness(150%);
+}
+
+.btn:active{
+  filter: brightness(80%);
+}
+
+.light{
+  background-color: rgb(172, 172, 172);
+  color:black !important
+}
+
+.orange{
+  background-color: rgb(255, 137, 27);
+  color:white !important ;
+}
+
+.reverse-orange{
+  background-color: white;
+  color: rgb(255, 137, 27) !important 
+}
+
+
+
+.row{
+  display: flex;
+  flex:1;
+  flex-direction: row;
 }
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+label{
+  padding: 5px;
+}
+
+.absolute-center{
+  position: absolute;
+margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+text-align: center;
 }
